@@ -34,7 +34,7 @@ for i in range(len(letters)-1):
         max_cnt_let = max_cnt_letters[i+1]
         max_letter=letters[i+1]
 
-print(max_letter)
+print(f"{max_letter}")
 
 
 #2
