@@ -1,6 +1,7 @@
 alphabet = "бвгджзйклмнпрстфхцчшщ"
 
-ru_alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+ru_alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+print(len(ru_alphabet)//2)
 nums="1234567890"
 
 text=''
@@ -21,30 +22,47 @@ while True:
     if valid == True:
         break
 
-text = text.lower()
-text+=" "
-text_list = []
-word = ""
 
-for i in range(len(text)):  # Своя функция split
-    if not text[i] in " ,.?!-_": # Так как нельзя использовать другие функции(((( например .isalpha()
-        word+=text[i]
-    elif word!="":
-        text_list.append(word)
-        word=""
-print(text_list)
+def my_lower(s):
+    r = ''
+    for char in s:
+        if char in ru_alphabet[33:]:
+            for i in range(len(ru_alphabet[33:])):
+                if char == ru_alphabet[33:][i]:
+                    r += ru_alphabet[:33][i]
+                    break
+        else:
+            r += char
+    return r
+
+def my_split(text):
+    word = ""
+    text_list = []
+    for i in range(len(text)):
+        if not text[i] in " ,.?!-_":
+            word+=text[i]
+        elif word!="":
+            text_list.append(word)
+            word=""
+    return text_list
+
+text = my_lower(text)
+print(text)
+text+=" "
+
 letters = []
 max_cnt_letters = []
-for i in range(len(text_list)): #Список ключей
-    if text_list[i][0] not in letters:
-        letters.append(text_list[i][0])
+list=my_split(text)
+for i in range(len(list)): #Список ключей
+    if list[i][0] not in letters:
+        letters.append(list[i][0])
 for i in letters: # "Список значений"
     cnt_let = 0
-    for j in range(len(text_list)):
-        if i == text_list[j][0]:
+    for j in range(len(list)):
+        if i == list[j][0]:
             cnt_let+=1
     max_cnt_letters.append(cnt_let)
-print(max_cnt_letters)
+print(f"после преобразований {letters}")
 max_letter=""
 max_cnt_let=1
 for i in range(len(letters)):
@@ -72,26 +90,19 @@ while True:
             break
     if valid == True:
         break
-text= text.lower()
+text= my_lower(text)
 text+=" "
 
 words_cnt=0
 
-text_list = []
-word = ""
+print(f"после преобразований {my_split(text)}")
 
-for i in range(len(text)):  # Своя условная функция split  Так как нельзя использовать встроенные функции((((((((
-    if not text[i] in " ,.?!-_": # Так как нельзя использовать другие функции(((( например .isalpha()
-        word+=text[i]
-    elif word != "":
-        text_list.append(word)
-        word=""
-print(text_list)
-
-for i in range(len(text_list)):
-    for j in range(len(text_list[i])):
-        if text_list[i][j]+text_list[i][j] in text_list[i] and text_list[i][j] in alphabet:
+for i in range(len(my_split(text))):
+    for j in range(len(my_split(text)[i])):
+        if my_split(text)[i][j]+my_split(text)[i][j] in my_split(text)[i] and my_split(text)[i][j] in alphabet:
             words_cnt+=1
             break
 
-print(words_cnt)
+print(f"Слов с удвоенной согласной: {words_cnt}")
+
+
