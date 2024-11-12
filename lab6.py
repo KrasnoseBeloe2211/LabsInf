@@ -1,11 +1,11 @@
 alphabet = "бвгджзйклмнпрстфхцчшщ"
 
 ru_alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
-print(len(ru_alphabet)//2)
+
 nums="1234567890"
 
 text=''
-
+print("Задание 1")
 while True:
     text = input("Введите текст: ")
     valid= False
@@ -75,6 +75,8 @@ print(f"{max_letter}")
 
 #2
 
+print("Задание 2")
+
 while True:
     text = input("Введите текст: ")
     valid= False
@@ -106,6 +108,8 @@ for i in range(len(my_split(text))):
 print(f"Слов с удвоенной согласной: {words_cnt}")
 
 #3
+print("Задание 3")
+
 n=0
 list = []
 while n==0 or n < 0:
