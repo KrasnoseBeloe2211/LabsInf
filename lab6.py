@@ -104,6 +104,8 @@ for i in range(len(my_split(text))):
             break
 
 print(f"Слов с удвоенной согласной: {words_cnt}")
+
+#3
 n=0
 list = []
 while n==0 or n < 0:
