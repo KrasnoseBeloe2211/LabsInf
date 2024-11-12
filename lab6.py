@@ -53,10 +53,10 @@ text+=" "
 letters = []
 max_cnt_letters = []
 list=my_split(text)
-for i in range(len(list)): #Список ключей
+for i in range(len(list)):
     if list[i][0] not in letters:
         letters.append(list[i][0])
-for i in letters: # "Список значений"
+for i in letters:
     cnt_let = 0
     for j in range(len(list)):
         if i == list[j][0]:
@@ -104,5 +104,40 @@ for i in range(len(my_split(text))):
             break
 
 print(f"Слов с удвоенной согласной: {words_cnt}")
+n=0
+list = []
+while n==0 or n < 0:
+    try:
+        n = int(input("Введите кол-во элементов в списке: "))
+        if n<0 or n==0:
+            print("Длина не может быть отрицательной или нулевой")
+    except ValueError:
+        print("Введите целое число")
 
+len_list = n
 
+while len(list) != n:
+    try:
+        el = float(input("Введите значение элемента: "))
+        list.append(el)
+    except ValueError:
+        print("Введите число, а не строку")
+p=1
+for i in range(len(list)):
+    if list[i] > 0:
+        p*=list[i]
+
+min_index = 0
+min_el = list[0]
+
+min_sum=0
+for i in range(len(list)):
+    if list[i]<=min_el:
+        min_index=i
+        min_el=list[i]
+
+for i in list[:min_index]:
+    min_sum+=i
+print(f"Введённый список {list}")
+print(f"Произведение положительных элементов: {p}")
+print(f"Сумма до минимального элемента: {min_sum}")
