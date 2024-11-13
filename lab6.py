@@ -1,7 +1,6 @@
 import random
 
-alphabet = "абвгджзйклмнпрстфхцчшщ"
-
+consonant_alphabet = "бвгджзйклмнпрстфхцчшщ"
 ru_alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
 
 nums = "1234567890"
@@ -104,7 +103,7 @@ print(f"после преобразований {my_split(text)}")
 
 for i in range(len(my_split(text))):
     for j in range(len(my_split(text)[i])):
-        if my_split(text)[i][j]+my_split(text)[i][j] in my_split(text)[i] and my_split(text)[i][j] in alphabet:
+        if my_split(text)[i][j]+my_split(text)[i][j] in my_split(text)[i] and my_split(text)[i][j] in consonant_alphabet:
             words_cnt+=1
             break
 
