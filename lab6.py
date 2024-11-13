@@ -72,7 +72,7 @@ for i in range(len(letters)):
         max_cnt_let = max_cnt_letters[i]
         max_letter=letters[i]
 
-print(f"{max_letter}")
+print(f"Самая повторяющаяся буква: {max_letter}")
 
 
 #2
