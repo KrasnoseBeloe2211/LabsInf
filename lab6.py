@@ -1,3 +1,5 @@
+import random
+
 alphabet = "абвгджзйклмнпрстфхцчшщ"
 
 ru_alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
@@ -55,7 +57,8 @@ max_cnt_letters = []
 list=my_split(text)
 for i in range(len(list)):
     if list[i][0] not in letters:
-        letters.append(list[i][0])
+        # letters.append
+        letters = [*letters, list[i][0]]
 for i in letters:
     cnt_let = 0
     for j in range(len(list)):
@@ -109,10 +112,10 @@ print(f"Слов с удвоенной согласной: {words_cnt}")
 
 #3
 print("Задание 3")
-
 n=0
 list = []
 while n==0 or n < 0:
+
     try:
         n = int(input("Введите кол-во элементов в списке: "))
         if n<0 or n==0:
@@ -122,12 +125,31 @@ while n==0 or n < 0:
 
 len_list = n
 
-while len(list) != n:
+# while len(list) != n:
+#     try:
+#         el = float(input("Введите значение элемента: "))
+#         list.append(el)
+#     except ValueError:
+#         print("Введите число, а не строку")
+while True:
+    valid = False
     try:
-        el = float(input("Введите значение элемента: "))
-        list.append(el)
+        left_border = int(input("Введите значение левую границу: "))
+        right_border = int(input("Введите значение правую границу: "))
+        valid=True
     except ValueError:
         print("Введите число, а не строку")
+    if valid == True:
+        break
+
+
+a = left_border
+b = right_border
+
+while len(list) != n:
+    number= random.randint(a,b)
+    list.append(number)
+
 p=1
 for i in range(len(list)):
     if list[i] > 0:
