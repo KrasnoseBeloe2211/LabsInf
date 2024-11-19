@@ -2,6 +2,7 @@ import random
 
 consonant_alphabet = "бвгджзйклмнпрстфхцчшщ"
 ru_alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+en_alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 nums = "1234567890"
 
@@ -14,9 +15,9 @@ while True:
         if i in nums:
             print("Чисел не должно быть")
             break
-        elif i not in ru_alphabet and not i in " ,.?!-_":
-            print("Только русские символы")
-            break
+        # elif i not in ru_alphabet and not i in " ,.?!-_":
+        #     print("Только русские символы")
+        #     break
         else:
             valid=True
             break
@@ -32,6 +33,10 @@ def my_lower(s):
                 if char == ru_alphabet[33:][i]:
                     r += ru_alphabet[:33][i]
                     break
+        if char in en_alphabet[26:]:
+            for i in range(len(en_alphabet[26:])):
+                if char == en_alphabet[26:][i]:
+                    r += en_alphabet[:26][i]
         else:
             r += char
     return r
@@ -86,9 +91,9 @@ while True:
         if i in nums:
             print("Чисел не должно быть")
             break
-        elif i not in ru_alphabet and not i in " ,.?!-_":
-            print("Только русские символы")
-            break
+        # elif i not in ru_alphabet and not i in " ,.?!-_":
+        #     print("Только русские символы")
+        #     break
         else:
             valid=True
             break
