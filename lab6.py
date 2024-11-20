@@ -95,7 +95,7 @@ while True:
         #     print("Только русские символы")
         #     break
         else:
-            valid=True
+            valid = True
             break
     if valid == True:
         break

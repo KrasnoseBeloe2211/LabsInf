@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9812d2b5-5ad7-4308-b409-9c5bca485bc8" name="Changes" comment="Lab6 new_commit" />
+    <list default="true" id="9812d2b5-5ad7-4308-b409-9c5bca485bc8" name="Changes" comment="Lab6 new_commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab7.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab7.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +51,7 @@
       <recent name="C:\Python projects\Labs__Inf" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.lab5">
+  <component name="RunManager" selected="Python.lab7">
     <configuration name="OPD" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Labs__Inf" />
       <option name="ENV_FILES" value="" />
@@ -304,7 +307,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732047034226</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Lab6 new_commit">
+      <option name="closed" value="true" />
+      <created>1732081616864</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732081616864</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
