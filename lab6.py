@@ -140,7 +140,8 @@ while True:
     try:
         left_border = int(input("Введите значение левую границу: "))
         right_border = int(input("Введите значение правую границу: "))
-        valid=True
+        if left_border < right_border:
+            valid=True
     except ValueError:
         print("Введите число, а не строку")
     if valid == True:

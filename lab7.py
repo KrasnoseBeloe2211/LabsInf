@@ -127,9 +127,11 @@ new_dict = dict()
 str = my_lower(str)
 new_str=''
 for i in str:
-    if i in " ,.?!-_/{}][=+()*&^%$#!":
-        new_str+=""
-    else:
+    # if i in " ,.?!-_/{}][=+()*&^%$#!":
+    #     new_str+=""
+    # else:
+    #     new_str+=i
+    if i.isalpha():
         new_str+=i
 for i in new_str:
     if i in new_dict:
