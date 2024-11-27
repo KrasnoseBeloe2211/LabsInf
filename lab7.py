@@ -25,7 +25,9 @@ for i in range(row_cnt):
         row.append(rand_value)
     matrix.append(row)
     row = []
-print(f"Полученная матрица: {matrix}")
+print(f"Полученная матрица: ")
+for i in matrix:
+    print(i)
 
 row_index=0
 column_index=0
@@ -65,7 +67,9 @@ for i in range(row_cnt):
         row.append(rand_value)
     matrix.append(row)
     row = []
-print(f"Полученная матрица: {matrix}")
+print(f"Полученная матрица: ")
+for i in matrix:
+    print(i)
 
 row_sum1 = 0
 row_sum2 = 0
@@ -138,4 +142,5 @@ for i in new_str:
         new_dict[i]+=1
     else:
         new_dict[i]=1
+
 print(new_dict)
