@@ -56,6 +56,7 @@ n3=0
 list1 = []
 list2 = []
 list3 = []
+
 while n1 <= 0 and n2 <= 0 and n3 <= 0:
 
     try:
