@@ -1,6 +1,8 @@
 import math
 import random
 
+
+print("Задание 1")
 def TriangleP(a):
     P = 3 * a
     S = math.sqrt(3) / 4 * a
@@ -29,6 +31,8 @@ P3, S3 = TriangleP(a3)
 
 print(f"Периметр 1: {P1}, Площадь 1: {S1} \nПериметр 2: {P2}, Площадь 2: {S2} \nПериметр 3: {P3}, Площадь 3: {S3} \n")
 
+
+print("Задание 2")
 def AverageListEl(list1 , list2, list3):
     positive_list = []
     sum1 =0
@@ -94,6 +98,7 @@ print(f"Список 3: {list3}")
 
 print(f"Среднее из всех списков: {AverageListEl(list1, list2, list3)}")
 
+print("Задание 3")
 def RevPrint(n):
 
     if n < 10:
