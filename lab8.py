@@ -102,9 +102,9 @@ print("Задание 3")
 def RevPrint(n):
 
     if n < 10:
-        print(n , end='')
+        print(n, end='')
     else:
-        print(n % 10 , end='')
+        print(n % 10, end='')
         RevPrint(n // 10)
     return ''
 
