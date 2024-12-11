@@ -17,7 +17,7 @@ while True:
         a2 = float(input("Введите сторону 2-го треугольника: "))
         a3 = float(input("Введите сторону 3-го треугольника: "))
         if a1 > 0 or a2 >0 or a3 > 0:
-            valid=True
+            valid = True
         else:
             print("Длина не должна быть отрицательной")
     except ValueError:
@@ -33,9 +33,9 @@ print(f"Периметр 1: {P1}, Площадь 1: {S1} \nПериметр 2: {
 
 
 print("Задание 2")
-def AverageListEl(list1 , list2, list3):
+def AverageListEl(list1, list2, list3):
     positive_list = []
-    sum1 =0
+    sum1 = 0
     for i in list1:
         if i > 0:
             positive_list.append(i)
@@ -54,9 +54,9 @@ def AverageListEl(list1 , list2, list3):
 
 #MAIN
 
-n1=0
-n2=0
-n3=0
+n1 = 0
+n2 = 0
+n3 = 0
 list1 = []
 list2 = []
 list3 = []
@@ -74,7 +74,7 @@ while n1 <= 0 and n2 <= 0 and n3 <= 0:
 
 while True:
     valid = False
-    cur_border=0
+    cur_border = 0
     try:
         left_border = int(input("Введите значение левую границу: "))
         right_border = int(input("Введите значение правую границу: "))
@@ -82,8 +82,8 @@ while True:
             valid=True
         elif left_border > right_border:
             cur_border = right_border
-            right_border= left_border
-            left_border=cur_border
+            right_border = left_border
+            left_border = cur_border
             valid = True
     except ValueError:
         print("Введите число, а не строку")
